@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<title>GEO-HISTORIA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style media="screen">
+  @media only screen and (min-width: 992px) {.map {height:325px;}}
+  @media only screen and (max-width: 479px) {.video {height:240px; width:320px}}
+  a:hover{
+    background-color: #ebbe09;
+    padding:10px;
+  }
+  a {
+    text-decoration: none;
+    font-family:Verdana,sans-serif;
+    color:green;
+  }
+</style>
+<body>
+
+  <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:300px;" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Cerrar &times;</button>
+    <h3 class="w3-bar-item">1º BACHILLERATO</h3>
+    <!-- HISTORIA EL MUNDO CONTEMPORANEO-->
+    <button class="w3-button w3-block w3-left-align" onclick="myAccFunc2()">
+    Historia del Mundo Contemporáneo <i class="fa fa-caret-down"></i>
+    </button>
+    <div id="demoAcc2" class="w3-hide w3-white w3-card">
+      <a href="../../1Bach/HistoriaMC/HistoriaMC0.html" class="w3-bar-item w3-button"><b>Tema 0:</b> Introducción a la asigantura</a>
+      <a href="../../1Bach/HistoriaMC/HistoriaMC1.html" class="w3-bar-item w3-button"><b>Tema 1:</b> El Antiguo Régimen</a>
+      <a href="../../1Bach/HistoriaMC/HistoriaMC2.html" class="w3-bar-item w3-button"><b>Tema 2:</b> Revoluciones Liberales y Nacionalismo</a>
+      <a href="../../1Bach/HistoriaMC/HistoriaMC3.html" class="w3-bar-item w3-button"><b>Tema 3:</b> La Revolución Industrial</a>
+      <a href="../../1Bach/HistoriaMC/HistoriaMC4.html" class="w3-bar-item w3-button"><b>Tema 4:</b> Segunda Revolución Industrial e Imperialismo</a>
+      <a href="../../1Bach/HistoriaMC/HistoriaMC5.html" class="w3-bar-item w3-button"><b>Tema 5:</b> Los Cambios Sociales. Origenes y Desarrollo del Movimiento Obrero</a>
+      <a href="../../1Bach/HistoriaMC/HistoriaMC6.html" class="w3-bar-item w3-button"><b>Tema 6:</b> Las Grandes Potencias</a>
+      <a href="../../1Bach/HistoriaMC/HistoriaMC7.html" class="w3-bar-item w3-button"><b>Tema 7:</b> La Primera Guerra Mundial</a>
+      <a href="../../1Bach/HistoriaMC/HistoriaMC8.html" class="w3-bar-item w3-button"><b>Tema 8:</b> La Revolución Rusa y la URSS</a>
+      <a href="../../1Bach/HistoriaMC/HistoriaMC9.html" class="w3-bar-item w3-button"><b>Tema 9:</b> La Economía de Entreguerras. La Gran Depresión</a>
+      <a href="../../1Bach/HistoriaMC/HistoriaMC10.html" class="w3-bar-item w3-button"><b>Tema 10:</b> El Ascenso de los Totalitarismos Fascista y Nazi</a>
+      <a href="../../1Bach/HistoriaMC/HistoriaMC11.html" class="w3-bar-item w3-button"><b>Tema 11:</b> La Segunda Guerra Mundial</a>
+      <a href="../../1Bach/HistoriaMC/HistoriaMC12.html" class="w3-bar-item w3-button"><b>Tema 12:</b> La Guerra Fría</a>
+      <a href="../../1Bach/HistoriaMC/HistoriaMC13.html" class="w3-bar-item w3-button"><b>Tema 13:</b> Evolución de los Bloques en un Mundo Bipolar</a>
+      <a href="../../1Bach/HistoriaMC/HistoriaMC14.html" class="w3-bar-item w3-button"><b>Tema 14:</b> Descolonización y Tercer Mundo</a>
+      <a href="../../1Bach/HistoriaMC/HistoriaMC15.html" class="w3-bar-item w3-button"><b>Tema 15:</b> América en el Siglo XX</a>
+      <a href="../../1Bach/HistoriaMC/HistoriaMC16.html" class="w3-bar-item w3-button"><b>Temas 16 y 17:</b> Geopolítica del Mundo Actual y Globalización, Crisis y Cambios Socioculturales</a>
+    </div>
+
+    <!-- PATRIMONIO -->
+    <button class="w3-button w3-block w3-left-align" onclick="myAccFunc4()">
+    Patrimonio de Andalucía <i class="fa fa-caret-down"></i>
+    </button>
+    <div id="demoAcc4" class="w3-hide w3-white w3-card">
+      <a href="Patrimonio0.html" class="w3-bar-item w3-button"><b>Tema 0:</b> Introducción a la asigantura</a>
+      <a href="Patrimonio1.html" class="w3-bar-item w3-button"><b>Tema 1:</b> Significación de Patrimonio</a>
+      <a href="Patrimonio2.html" class="w3-bar-item w3-button"><b>Tema 2:</b> Normativa</a>
+      <a href="Patrimonio3.html" class="w3-bar-item w3-button"><b>Tema 3:</b> Prehistoria</a>
+      <a href="Patrimonio4.html" class="w3-bar-item w3-button"><b>Tema 4:</b> Mundo Antiguo. Roma</a>
+      <a href="Patrimonio5.html" class="w3-bar-item w3-button"><b>Tema 5:</b> Arte Islámico</a>
+      <a href="Patrimonio6.html" class="w3-bar-item w3-button"><b>Tema 6:</b> Arte Gótico</a>
+      <a href="Patrimonio7.html" class="w3-bar-item w3-button"><b>Tema 7:</b> Renacimiento</a>
+      <a href="Patrimonio8.html" class="w3-bar-item w3-button"><b>Tema 8:</b> Arte Barroco</a>
+      <a href="Patrimonio9.html" class="w3-bar-item w3-button"><b>Tema 9:</b> Urbanismo e Industrialización</a>
+      <a href="Patrimonio10.html" class="w3-bar-item w3-button"><b>Tema 10:</b> Patrimonio Natural</a>
+      <a href="Patrimonio11.html" class="w3-bar-item w3-button"><b>Tema 11:</b> Patrimonio Etnográfico</a>
+      <a href="Patrimonio12.html" class="w3-bar-item w3-button"><b>Tema 12:</b> La Explotación del Patrimonio como Recurso</a>
+    </div>
+
+    <h3 class="w3-bar-item">2º BACHILLERATO</h3>
+    <!-- GEOGRAFÍA -->
+    <button class="w3-button w3-block w3-left-align" onclick="myAccFunc3()">
+    Geografía de España <i class="fa fa-caret-down"></i>
+    </button>
+    <div id="demoAcc3" class="w3-hide w3-white w3-card">
+      <a href="../../2Bach/Geografia/Geo0.html" class="w3-bar-item w3-button"><b>Tema 0:</b> Introducción a la asigantura</a>
+      <a href="../../2Bach/Geografia/Geo1.html" class="w3-bar-item w3-button"><b>Tema 1:</b> España en su Contexto y Diversidad Territorial</a>
+      <a href="../../2Bach/Geografia/Geo2.html" class="w3-bar-item w3-button"><b>Tema 2:</b> El Relieve</a>
+      <a href="../../2Bach/Geografia/Geo3.html" class="w3-bar-item w3-button"><b>Tema 3:</b> El Clima</a>
+      <a href="../../2Bach/Geografia/Geo4.html" class="w3-bar-item w3-button"><b>Tema 4:</b> Las Aguas y la Red Hidrográfica</a>
+      <a href="../../2Bach/Geografia/Geo5.html" class="w3-bar-item w3-button"><b>Tema 5:</b> Las Regiones Biogeográficas</a>
+      <a href="../../2Bach/Geografia/Geo6.html" class="w3-bar-item w3-button"><b>Tema 6:</b> La Población Española</a>
+      <a href="../../2Bach/Geografia/Geo7.html" class="w3-bar-item w3-button"><b>Tema 7:</b> El Espacio Urbano</a>
+      <a href="../../2Bach/Geografia/Geo8.html" class="w3-bar-item w3-button"><b>Tema 8:</b> El Espacio Rural</a>
+      <a href="../../2Bach/Geografia/Geo9.html" class="w3-bar-item w3-button"><b>Tema 9:</b> La Actividad Pesquera</a>
+      <a href="../../2Bach/Geografia/Geo10.html" class="w3-bar-item w3-button"><b>Tema 10:</b> La Actividad Industrial</a>
+      <a href="../../2Bach/Geografia/Geo11.html" class="w3-bar-item w3-button"><b>Tema 11:</b> Las Actividades Turísticas</a>
+      <a href="../../2Bach/Geografia/Geo12.html" class="w3-bar-item w3-button"><b>Tema 12:</b> El Transporte y su Papel en el Territorio</a>
+    </div>
+
+    <!-- HISTORIA ESPAÑA-->
+    <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+    Historia de España <i class="fa fa-caret-down"></i>
+    </button>
+    <div id="demoAcc" class="w3-hide w3-white w3-card">
+      <a href="../../2Bach/Historia/Historia0.html" class="w3-bar-item w3-button"><b>Tema 0:</b> Introducción a la asigantura</a>
+      <a href="../../2Bach/Historia/Historia1.html" class="w3-bar-item w3-button"><b>Tema 1:</b> La Península Ibérica desde la Prehistoria hasta la invasión Islámica (711)</a>
+      <a href="../../2Bach/Historia/Historia2.html" class="w3-bar-item w3-button"><b>Tema 2:</b> La Edad Media (711-1474)</a>
+      <a href="../../2Bach/Historia/Historia3.html" class="w3-bar-item w3-button"><b>Tema 3:</b> La Formación de la Monarquía Hispánica y su Expansión Mundial (1474-1700)</a>
+      <a href="../../2Bach/Historia/Historia4.html" class="w3-bar-item w3-button"><b>Tema 4:</b> España en la Órbita Francesa: el Reformismo de los Primeros Borbones (1700-1788)</a>
+      <a href="../../2Bach/Historia/Historia5.html" class="w3-bar-item w3-button"><b>Tema 5:</b> La Crisis del Antiguo Régimen (1788-1833): Liberalismo frente a Absolutismo</a>
+      <a href="../../2Bach/Historia/Historia6.html" class="w3-bar-item w3-button"><b>Tema 6:</b> La Conflictiva Construcción del Estado Liberal (1833-1874)</a>
+      <a href="../../2Bach/Historia/Historia7.html" class="w3-bar-item w3-button"><b>Tema 7:</b> La Restauración Borbónica: implantación y afianzamiento de un nuevo Sistema Político (1874-1902)</a>
+      <a href="../../2Bach/Historia/Historia8.html" class="w3-bar-item w3-button"><b>Tema 8:</b> Pervivencias y transformaciones económicas en el siglo XIX: un desarrollo insuficiente</a>
+      <a href="../../2Bach/Historia/Historia9.html" class="w3-bar-item w3-button"><b>Tema 9:</b> La crisis del Sistema de la Restauración y la caída de la Monarquía (1902-1931)</a>
+      <a href="../../2Bach/Historia/Historia10.html" class="w3-bar-item w3-button"><b>Tema 10:</b> La Segunda República. La Guerra Civil en un contexto de Crisis Internacional (1931-1939)</a>
+      <a href="../../2Bach/Historia/Historia11.html" class="w3-bar-item w3-button"><b>Tema 11:</b> La Dictadura Franquista (1939-1975)</a>
+      <a href="../../2Bach/Historia/Historia12.html" class="w3-bar-item w3-button"><b>Tema 12:</b> Normalización Democrática de España e Integración en Europa (desde 1975)</a>
+    </div>
+
+    <!-- HISTORIA ARTE-->
+    <button class="w3-button w3-block w3-left-align" onclick="myAccFunc7()">
+    Historia del Arte <i class="fa fa-caret-down"></i>
+    </button>
+    <div id="demoAcc7" class="w3-hide w3-white w3-card">
+      <a href="../../2Bach/HistoriaArte/HistoriaArte0.html" class="w3-bar-item w3-button"><b>Tema 0:</b> Introducción a la asigantura</a>
+      <a href="../../2Bach/HistoriaArte/HistoriaArte1.html" class="w3-bar-item w3-button"><b>Tema 1:</b> Arte Griego</a>
+      <a href="../../2Bach/HistoriaArte/HistoriaArte2.html" class="w3-bar-item w3-button"><b>Tema 2:</b> Arte Romano</a>
+      <a href="../../2Bach/HistoriaArte/HistoriaArte3.html" class="w3-bar-item w3-button"><b>Tema 3:</b> Arte Paleocristiano y Bizantino</a>
+      <a href="../../2Bach/HistoriaArte/HistoriaArte4.html" class="w3-bar-item w3-button"><b>Tema 4:</b> Arte Hispano-musulmán</a>
+      <a href="../../2Bach/HistoriaArte/HistoriaArte5.html" class="w3-bar-item w3-button"><b>Tema 5:</b> Arte Románico</a>
+      <a href="../../2Bach/HistoriaArte/HistoriaArte6.html" class="w3-bar-item w3-button"><b>Tema 6:</b> Arte Gótico</a>
+      <a href="../../2Bach/HistoriaArte/HistoriaArte7.html" class="w3-bar-item w3-button"><b>Tema 7:</b> Arte Renancentista y Manierista</a>
+      <a href="../../2Bach/HistoriaArte/HistoriaArte8.html" class="w3-bar-item w3-button"><b>Tema 8:</b> Arte Barroco</a>
+      <a href="../../2Bach/HistoriaArte/HistoriaArte9.html" class="w3-bar-item w3-button"><b>Tema 9:</b> Arte Neoclásico</a>
+      <a href="../../2Bach/HistoriaArte/HistoriaArte10.html" class="w3-bar-item w3-button"><b>Tema 10:</b> Arte del s.XIX</a>
+      <a href="../../2Bach/HistoriaArte/HistoriaArte11.html" class="w3-bar-item w3-button"><b>Tema 11:</b> Arte en la 1ª mitad del s.XX</a>
+      <a href="../../2Bach/HistoriaArte/HistoriaArte12.html" class="w3-bar-item w3-button"><b>Tema 12:</b> Arte en la 2ª mitad del s.XX</a>
+    </div>
+
+    <!-- ESA -->
+    <h3 class="w3-bar-item">NIVEL 1 DE ESA</h3>
+    <button class="w3-button w3-block w3-left-align" onclick="myAccFunc5()">
+    Ámbito Social <i class="fa fa-caret-down"></i>
+    </button>
+
+    <div id="demoAcc5" class="w3-hide w3-white w3-card">
+      <a href="../../ESO-ESA/1erCiclo/Mod1.html" class="w3-bar-item w3-button"><b>Módulo I</b></a>
+      <a href="../../ESO-ESA/1erCiclo/Mod2.html" class="w3-bar-item w3-button"><b>Módulo II</b></a>
+      <a href="../../ESO-ESA/1erCiclo/Mod3.html" class="w3-bar-item w3-button"><b>Módulo III</b></a>
+    </div>
+
+    <h3 class="w3-bar-item">NIVEL 2 DE ESA</h3>
+    <button class="w3-button w3-block w3-left-align" onclick="myAccFunc6()">
+    Ámbito Social <i class="fa fa-caret-down"></i>
+    </button>
+
+    <div id="demoAcc6" class="w3-hide w3-white w3-card">
+      <a href="../../ESO-ESA/2oCiclo/Mod4.html" class="w3-bar-item w3-button"><b>Módulo IV</b></a>
+      <a href="../../ESO-ESA/2oCiclo/Mod5.html" class="w3-bar-item w3-button"><b>Módulo V</b></a>
+      <a href="../../ESO-ESA/2oCiclo/Mod6.html" class="w3-bar-item w3-button"><b>Módulo VI</b></a>
+    </div>
+
+    <br>
+    <p align="center">
+      <a href="../../EnlacesUtiles.html"><b>ENLACES ÚTILES</b></a>
+    </p>
+    <br>
+    <p align="center">
+      <a href="../../index.html"><b>Volver a la Página Inicial</b> <img src="../../flecha.png" alt="" style="width:20px"></a>
+    </p>
+  </div>
+
+
+  <!-- CONTENIDO DE LA PÁGINA -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- HEADER -->
+  <div class="w3-green">
+    <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+    <div class="w3-container">
+<h1><b>PATRIMONIO - TEMA 3</b></h1>
+    </div>
+  </div>
+
+  <!-- TEXTO, VIDEOS Y DEMÁS -->
+  <img src="https://i.imgur.com/cVyBRqR.png" alt="Mapa Juan de la Cosa" class="map" style="width:100%">
+  <div class="w3-container" style="font-size:18px">
+    <br>
+    <p></p>
+<p align="center"><a href="https://drive.google.com/drive/folders/1LtoFh_3gJpBkimI6nh9e4RZRple0nV6Q?usp=sharing"><b>Tema 3 y materiales (pincha para abrir)</b></a></p>
+
+    <p align="center">
+      <!-- VIDEO/S AQUÍ (class="video" width="480" height="360") -->
+      <iframe class="video" width="480" height="360" src="https://www.youtube.com/embed/hamXj_rNKOs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <iframe class="video" width="480" height="360" src="https://www.youtube.com/embed/juAUcArfjW8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <iframe class="video" width="480" height="360" src="https://www.youtube.com/embed/DkauuhQ8uAY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <iframe class="video" width="480" height="360" src="https://www.youtube.com/embed/JwKAPvKleks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <iframe class="video" width="480" height="360" src="https://www.youtube.com/embed/cOmW8EAdo8A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <iframe class="video" width="480" height="360" src="https://www.youtube.com/embed/DcAdDvwjOTs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+
+  </div>
+
+</div>
+
+<!-- NO TOCAR -->
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className =
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+
+function myAccFunc2() {
+  var x = document.getElementById("demoAcc2");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className =
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+
+function myAccFunc3() {
+  var x = document.getElementById("demoAcc3");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className =
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+
+function myAccFunc4() {
+  var x = document.getElementById("demoAcc4");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className =
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+
+function myAccFunc5() {
+  var x = document.getElementById("demoAcc5");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className =
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+
+function myAccFunc6() {
+  var x = document.getElementById("demoAcc6");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className =
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+
+function myAccFunc7() {
+  var x = document.getElementById("demoAcc7");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className =
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+
+function myDropFunc() {
+  var x = document.getElementById("demoDrop");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className =
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+</script>
+
+</body>
+</html>
